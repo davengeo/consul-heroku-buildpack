@@ -10,6 +10,8 @@ consul_download_url="$consul_url/$consul_package_version"
 
 echo "-----> Downloading consul binary package from $consul_download_url"
 
+echo $1/bin/$consul_package_version
+
 curl -L --silent $consul_download_url > $1/bin/$consul_package_version
 cd $1/bin && unzip $consul_package_version && rm $consul_package_version
 
