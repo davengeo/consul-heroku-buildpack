@@ -14,9 +14,6 @@ echo $env_dir/$consul_package_version
 mkdir $env_dir/bin
 
 curl -L --silent $consul_download_url > $env_dir/bin/$consul_package_version
-
-ls $env_dir/bin -la
-
 cd $env_dir/bin && unzip $consul_package_version && rm $consul_package_version
 
 ls $env_dir/bin -la
